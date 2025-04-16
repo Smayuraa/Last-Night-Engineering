@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/Navbar.css";
+import "../styles/navbar.css";
 import Logo from "../assets/Logo.png";
 import FlashMsg from "../utils/FlashMsg";
 import { FaBars, FaKey, FaSignOutAlt, FaCrown } from "react-icons/fa";
