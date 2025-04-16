@@ -5,7 +5,7 @@ import FlashMsg from "../utils/FlashMsg";
 import forgotpassImg from '../assets/forgotpassImg.png';
 import { FaLink } from "react-icons/fa";
 
-const ForgotPassword = () => {
+const ForgetPassword = () => {
   const [email, setEmail] = useState("");
   const [flashMessage, setFlashMessage] = useState("");
   const [flashType, setFlashType] = useState("");
@@ -93,4 +93,4 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword;
+export default ForgetPassword;
