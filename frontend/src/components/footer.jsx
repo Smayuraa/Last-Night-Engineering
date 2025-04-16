@@ -1,5 +1,5 @@
 import { FaInstagram, FaLinkedin, FaYoutube, FaEnvelope, FaPhoneAlt, FaFacebook } from "react-icons/fa";
-import "../styles/Footer.css";
+import "../styles/footer.css";
 import Logo from "../assets/Logo.png"; 
 
 const Footer = () => {
