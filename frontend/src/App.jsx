@@ -14,7 +14,7 @@ import ResetPassword from "./components/ResetPassword";
 import Contactus from "./components/Contactus";
 import CreatePost from "./components/CreatePost";
 import AboutUs from "./components/Aboutus";
-import AdminProtect from "./components/Adminprotect";
+import AdminProtect from "./components/AdminProtect.jsx";
 import Admin from "./AdminComponents/Admin";
 import FloatingIcons from "./components/FloatingIcons";
 
