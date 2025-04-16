@@ -9,7 +9,7 @@ import Notes from "./components/Notes";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import Register from "./components/Register";
-import ForgotPassword from "./components/Forgetpassword";
+import ForgotPassword from "./components/ForgotPassword";
 import ResetPassword from "./components/ResetPassword";
 import Contactus from "./components/Contactus";
 import CreatePost from "./components/CreatePost";
