@@ -1,0 +1,291 @@
+body, html{
+  min-height: 100vh;
+}
+
+.section-container {
+  max-width: 1600px;
+  margin: -4rem auto;
+  padding: 20px;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+  top: 2rem;
+}
+
+.section-card {
+  position: relative;
+  width: 17rem;
+  min-height: 17rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+  margin: 0 auto
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+  background-color: #f5b820;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section-card-image {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.section-card:hover .section-card-image {
+  opacity: 0.7;
+}
+
+.section-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.section-card:hover .section-image-placeholder {
+  background: #f5b820;
+}
+
+.section-placeholder-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.section-card-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to top, rgba(245, 184, 32, 0.9) 0%, transparent 500%);
+  color: white;
+  opacity: 0;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  transform: translateY(0);
+}
+
+.section-card:hover .section-card-overlay {
+  opacity: 1;
+  top: 0;
+  transform: translateY(0);
+}
+
+.section-card-details h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: underline;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  margin-bottom: 0px;
+}
+
+.section-technologies {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  margin-bottom: 5px;
+}
+
+.section-description {
+  max-height: 160px;
+  text-align: justify;
+}
+
+.section-description p {
+  font-style: italic;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  margin-bottom: 10px;
+}
+
+.section-card-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section-card-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: white;
+  color: green;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid white;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  height: 32px;
+  margin-top: 10px;
+}
+
+.section-card-actions a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.section-card-actions .section-icon {
+  position: relative;
+  color: green;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.section-admin-actions {
+  position: absolute;
+  top: -50px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.section-card:hover .section-admin-actions {
+  top: 10px;
+}
+
+.section-admin-actions button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background: white;
+  color: #f5b820;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  margin: 0;
+}
+
+.section-admin-actions button:hover {
+  transform: scale(1.1);
+}
+
+.section-admin-actions button .section-icon {
+  color: inherit;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-edit-btn {
+  color: blue !important;
+}
+
+.section-del-btn {
+  color: red !important;
+}
+
+.section-info-btn {
+  color: green !important;
+}
+
+.section-card-yt{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: 13.7rem;
+}
+
+.section-grid-yt{
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.section-edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .section-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-top: -20px;
+  }
+  
+  .section-card-yt {
+    width: 100%;
+    height: 160px;
+  }
+  
+  .section-card-overlay {
+    padding: 15px;
+  }
+  
+  .section-card-details h3 {
+    font-size: 1.1rem;
+  }
+  
+  .section-description p {
+    font-size: 0.8rem;
+  }
+  
+  .section-card-actions a {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    height: 28px;
+  }
+  
+  .section-admin-actions button {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .section-admin-actions button .section-icon {
+    font-size: 0.8rem;
+  }
+  
+  .section-card-actions .section-icon {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,201 @@
+.edit-form {
+  border: 3px solid orange;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 165, 0, 0.5);
+  width: 90%;
+  max-width: 1000px;
+  padding: 30px;
+  background: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.edit-form h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: orange;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.edit-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.edit-form-group {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.edit-form-group label {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #333;
+  min-width: 120px;
+  margin-right: 15px;
+}
+
+.edit-form-group input,
+.edit-form-group textarea {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid orange;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  min-width: 0;
+}
+
+.edit-form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.edit-form-group input:focus,
+.edit-form-group textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.6);
+  border-color: #ff8c00;
+}
+
+.edit-form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.edit-form-save-btn,
+.edit-form-cancel-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.edit-form-save-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.edit-form-cancel-btn {
+  border: 2px solid #f44336;
+  color: red;
+  background-color: white;
+}
+
+.edit-form-save-btn:disabled,
+.edit-form-cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.edit-form-hint {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.edit-form {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ff8c00 #f1f1f1;
+}
+
+.edit-form::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+.edit-form::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+.edit-form::-webkit-scrollbar-thumb {
+  background: #ff8c00;
+  border-radius: 2px;
+}
+
+.edit-form::-webkit-scrollbar-thumb:hover {
+  background: #e67e00;
+}
+
+@media (max-width: 768px) {
+  .edit-form {
+    width: 95%;
+    max-height: 90vh;
+    padding: 20px;
+    margin: 5% auto;
+    overflow-y: auto;
+  }
+  
+  .edit-form-group {
+    min-width: 100%;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+  
+  .edit-form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    min-width: auto;
+    margin-right: 0;
+  }
+  
+  .edit-form-buttons {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  
+  .edit-form-save-btn,
+  .edit-form-cancel-btn {
+    width: 100%;
+  }
+
+  .edit-form-group input,
+  .edit-form-group textarea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .edit-form {
+    max-height: 85vh;
+    padding: 15px;
+  }
+  
+  .edit-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .edit-form-row {
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .edit-form-group {
+    margin-bottom: 0.6rem;
+  }
+  
+  .edit-form-group input,
+  .edit-form-group textarea {
+    padding: 10px 12px;
+  }
+}

@@ -1,0 +1,203 @@
+.loginContainer {
+  border: 3px solid orange;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 165, 0, 0.5);
+  width: 80%; 
+  padding: 20px;
+  margin: auto;
+  margin-top: 14%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  background: white;
+}
+
+.signupcontainer{
+  position: relative;
+  top: -3rem;
+}
+
+.forgetcontainer{
+  position: relative;
+  top: 1.5rem;
+  padding: 3rem 0;
+}
+
+.resetcontainer{
+  position: relative;
+  top: 4rem;
+  padding: 3rem 0;
+}
+
+.text-orange {
+  color: orange !important;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.text-orange:hover {
+  color: #ff8c00 !important;
+  text-decoration: underline;
+}
+
+.btn-orange, .btn-outline-orange {
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.btn-orange {
+  background: orange;
+  color: black;
+  border: none;
+}
+
+.btn-orange:hover, .btn-outline-orange:hover {
+  background: #ff8c00;
+  color: white;
+}
+
+.btn-outline-orange {
+  border: 2px solid orange;
+  color: orange;
+  background: transparent;
+}
+
+.form-control {
+  border: 1px solid orange;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.6);
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 165, 0, 0.5);
+}
+
+.loginContainer .form-control,
+.loginContainer input:not([type="button"]):not([type="submit"]):not([type="reset"]) {
+  cursor: text !important;
+}
+
+/* This will style the select itself on hover */
+select.form-control:hover {
+  border-color: #ff8c00;
+}
+
+/* This provides limited styling for options in some browsers */
+select.form-control option:checked {
+  background-color: #ff8c00;
+  color: white;
+}
+
+/* This might work in some browsers */
+select.form-control option:hover {
+  background-color: #ff8c00 !important;
+  color: white !important;
+}
+.form-check-input:checked {
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+}
+
+.custom-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ff8c00;
+  border-radius: 2px;
+  position: relative;
+}
+
+.custom-checkbox:checked {
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .loginContainer {
+    width: 95%;
+    max-width: 100%;
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+  }
+
+  .forgetcontainer{
+    position: relative;
+    top: 10rem;
+    padding: 3rem 0 !important;
+  }
+
+  .resetcontainer{
+    position: relative;
+    top: 6rem;
+    padding: 3rem 0 !important;
+  }
+
+  .form-control {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .btn-orange, 
+  .btn-outline-orange {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .text-orange {
+    font-size: 15px;
+  }
+
+  .eyes {
+    padding: 8px 12px;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .loginContainer input {
+    width: 100%;
+  }
+
+  .img-fluid {
+    max-width: 80%;
+    margin: 0 auto 20px;
+  }
+
+  .custom-checkbox {
+    appearance: none;
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid #ff8c00;
+    border-radius: 2px;
+    position: relative;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginContainer {
+    margin-top: 30%;
+    padding: 12px;
+  }
+
+  .btn-orange,
+  .btn-outline-orange {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .text-orange {
+    font-size: 14px;
+  }
+}

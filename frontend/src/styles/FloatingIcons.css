@@ -1,0 +1,127 @@
+.floating-icons {
+  position: fixed;
+  bottom: 50px;
+  left: 91rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 200;
+}
+
+.floating-icons a, .floating-icons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.floating-icons a::after, .floating-icons button::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 70px;
+  white-space: nowrap;
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.floating-icons a:hover::after, .floating-icons button:hover::after {
+  opacity: 1;
+}
+
+.floating-icons a:hover, .floating-icons button:hover {
+  transform: scale(1.1) translateY(-5px);
+  background-color: #ff8c00;
+}
+
+.floating-icons a:hover svg, .floating-icons button:hover svg {
+  color: white !important;
+}
+
+.whatsapp-icon.pulse-active {
+  animation: pulse-green 2s;
+}
+
+.phone-icon.pulse-active {
+  animation: pulse-blue 2s 0.5s;
+}
+
+.chatbot-icon.pulse-active {
+  animation: pulse-purple 2s 1s;
+}
+
+@keyframes pulse-green {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@keyframes pulse-blue {
+  0% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 123, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+}
+
+@keyframes pulse-purple {
+  0% { box-shadow: 0 0 0 0 rgba(108, 92, 231, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(108, 92, 231, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(108, 92, 231, 0); }
+}
+
+@media (max-width: 768px) {
+  .floating-icons {
+    bottom: 15px;
+    right: 15px;
+    left: auto;
+    gap: 10px;
+  }
+  
+  .floating-icons a, .floating-icons button {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .floating-icons a::after, .floating-icons button::after {
+    font-size: 12px;
+    right: 60px;
+    padding: 3px 8px;
+  }
+}
+
+.chatbot-modal {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 350px;
+  height: 500px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .chatbot-modal {
+    width: 90%;
+    right: 5%;
+    bottom: 80px;
+    height: 60vh;
+  }
+}

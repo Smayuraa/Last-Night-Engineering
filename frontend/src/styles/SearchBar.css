@@ -1,0 +1,136 @@
+.search-bar-wrapper {
+  width: 100%;
+  margin-top: 90px;
+  position: relative;
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 12px;
+}
+
+.search-input {
+  width: 50%;
+  border: 2px solid #f5b820;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  outline: none;
+  background-color: white;
+  color: #333;
+  position: relative;
+  z-index: 100;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-input.focused {
+  border-color: #f5b820;
+  box-shadow: 0 0 8px rgba(245, 184, 32, 0.6);
+}
+
+.suggestions-box {
+  position: absolute;
+  top: 96%;
+  left: 0.7rem;
+  width: 49%;
+  background: white;
+  border: 2px solid white;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 6px #f5b820;
+  z-index: 10;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 8px 15px;
+  cursor: pointer;
+  color: #f5b820;
+  line-height: 1.2;
+}
+
+.no-suggestions {
+  padding: 8px 15px;
+  color: #f5b820;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-want {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: none;
+  width: 8rem;
+  background-color: transparent;
+  border: 2px solid #f5b820;
+  color: #f5b820;
+}
+
+.btn-create {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: none;
+  background-color: #f5b820;
+  color: white;
+}
+
+.search-bar-container::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #f5b820;
+}
+
+@media (max-width: 768px) {
+  .search-bar-container {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .suggestions-box {
+    width: 90%;
+    left: 1.07rem;
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .btn-want,
+  .btn-create {
+    width: 100%;
+  }
+}

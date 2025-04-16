@@ -1,0 +1,147 @@
+.create-form-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 5rem;
+}
+
+.create-form {
+  border: 3px solid orange;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 165, 0, 0.5);
+  padding: 30px;
+  background: white;
+  position: relative;
+  z-index: 100;
+}
+
+.create-form h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: orange;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.create-form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 15px;
+}
+
+.create-form-group label {
+  flex: 0 0 120px; 
+  font-weight: 600;
+  color: #333;
+  text-align: right;
+}
+
+.create-form-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid orange;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  min-width: 0; 
+}
+
+.create-form-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.6);
+  border-color: #ff8c00;
+}
+
+.create-form-input[type="text"],
+.create-form-input[type="url"] {
+  height: 40px;
+}
+
+.create-form-input textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.create-form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.create-form-save-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background: orange;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.create-form-save-btn:hover {
+  background: #ff8c00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 140, 0, 0.3);
+}
+
+.create-form-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .create-form {
+      padding: 20px;
+  }
+  
+  .create-form-group {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+      margin-bottom: 0.75rem;
+  }
+  
+  .create-form-group label {
+      flex: 1;
+      text-align: left;
+      width: 100%;
+  }
+  
+  .create-form h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+  }
+  
+  .create-form-buttons {
+      margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-form {
+      padding: 15px;
+  }
+  
+  .create-form h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+  }
+  
+  .create-form-input {
+      padding: 8px;
+      width: 100%;
+  }
+  
+  .create-form-save-btn {
+      padding: 10px 20px;
+      width: 100%;
+  }
+}

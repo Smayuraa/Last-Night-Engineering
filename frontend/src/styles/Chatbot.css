@@ -1,0 +1,150 @@
+.chatbotContainer {
+  width: 25rem;
+  height: 25rem;
+  border: 2px solid #ff8c00;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  bottom: 40px;
+  left: 65rem;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatWindow {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  padding: 10px 15px;
+  border-radius: 18px;
+  max-width: 70%;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.userMessage {
+  background-color: #ff8c00;
+  color: white;
+  margin-left: auto;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+}
+
+.botMessage {
+  background-color: #ffffff;
+  color: #333;
+  margin-right: auto;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.inputArea {
+  position: relative;
+  border-top: 2px solid #ff8c00;
+  background: white;
+}
+
+.inputContainer {
+  display: flex;
+  width: 100%;
+}
+
+.input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.input::placeholder {
+  color: #ff8c00;
+  opacity: 0.7;
+}
+
+.button {
+  padding: 0 20px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #e67e00;
+}
+
+.suggestionsContainer {
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #ff8c00;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.suggestion {
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #ff8c00;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #ffe4cc;
+}
+
+.suggestion:hover, .suggestion.active {
+  background-color: #fff4e6;
+  color: #e67e00;
+}
+
+.contact-link {
+  color: #ff8c00;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.contact-link:hover {
+  color: #e67e00;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff8c00;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e67e00;
+}
+
+@media (max-width: 768px) {
+  .chatbotContainer {
+    width: 90%;
+    height: 50%;
+    left: 50%;
+    bottom: 15rem;
+    transform: translate(-50%, 50%);
+    border-radius: 12px;
+  }
+}
